@@ -1,4 +1,4 @@
-FROM node:18-alpine as base
+FROM node:18 as base
 
 WORKDIR /home/node/app
 
@@ -10,10 +10,8 @@ COPY ./server .
 
 FROM base as production
 
-ENV NODE_PATH=./build
-
 RUN yarn build
 
-CMD ["node", "build/index.js"]
+CMD ["node", "dist/app.js"]
 
-EXPOSE 3000
+EXPOSE 3333

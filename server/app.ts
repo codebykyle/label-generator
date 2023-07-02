@@ -79,8 +79,6 @@ app.post('/', async (req: Request, res: Response) => {
         req.body.items
     )
 
-    console.log(labelRequest)
-
     // @ts-ignore;
     const sheetType = availableSheets[requested_sheet];
 

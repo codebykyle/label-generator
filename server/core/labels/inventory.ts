@@ -132,8 +132,6 @@ export class Label extends LabelContract {
             "image"
         );
 
-        console.log(layout.bottom)
-
         JsBarcode(
             barcodeCanvas,
             params.data.barcode,
@@ -145,15 +143,6 @@ export class Label extends LabelContract {
                 height: layout.bottom.toPx().height / 2,
                 width: 1
             })
-
-        console.log({
-            url: 'data:image/jpg;base64,' + barcodeCanvas.toBuffer().toString('base64'),
-            height: barcodeCanvas.height,
-            width: barcodeCanvas.width,
-            px_w: layout.bottom.toPx().width,
-            px_h: layout.bottom.toPx().height
-        });
-
 
         params.document.image(
             barcodeCanvas.toBuffer(),

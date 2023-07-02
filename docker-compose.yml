@@ -7,4 +7,5 @@ services:
       context: .
       dockerfile: Dockerfile
       target: production
-    command: node build/index.js
+    ports:
+      - "3333:3333"
