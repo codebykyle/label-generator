@@ -1,9 +1,9 @@
-name: push to docker
+name: Push to docker hub
 
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
 
 jobs:
   docker:
